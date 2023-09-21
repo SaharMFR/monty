@@ -8,3 +8,6 @@ poem
 pop
 push 8
 pint
+pchar
+push 72
+pchar

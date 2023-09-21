@@ -5,7 +5,7 @@
  * @head: The pointer to the head of the stack.
  * @current_line: The currently-executed line.
  */
-void f_pint(stack_t **head, unsigned int current_line)
+void f_pchar(stack_t **head, unsigned int current_line)
 {
 	if (*head)
 	{
@@ -19,6 +19,7 @@ void f_pint(stack_t **head, unsigned int current_line)
 			free_stack(*head);
 			exit(EXIT_FAILURE);
 		}
+	}
 	else
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", current_line);
