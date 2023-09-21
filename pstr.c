@@ -8,6 +8,7 @@
 void f_pstr(stack_t **head, unsigned int current_line)
 {
 	stack_t *h = *head;
+	(void) current_line;
 
 	while (h && h->n > 0 && h->n <= 127)
 	{
