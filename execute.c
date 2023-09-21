@@ -23,6 +23,7 @@ void execute(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 		{"mod", f_mod},
 		{"pchar", f_pchar},
 		{"pstr", f_pstr},
+		{"rotl", f_rotl},
 		{NULL, NULL}
 	};
 
