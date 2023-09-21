@@ -16,6 +16,7 @@ void execute(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 		{"pop", f_pop},
 		{"swap", f_swap},
 		{"add", f_add},
+		{"nop", f_nop},
 		{NULL, NULL}
 	};
 
