@@ -70,6 +70,7 @@ void f_mod(stack_t **head, unsigned int current_line);
 void f_pchar(stack_t **head, unsigned int current_line);
 void f_pstr(stack_t **head, unsigned int current_line);
 void f_rotl(stack_t **head, unsigned int currnet_line);
+void f_rotr(stack_t **head, unsigned int current_line);
 void execute(char *line, stack_t **head, unsigned int line_number, FILE *file);
 void free_stack(stack_t *head);
 void saddnode(stack_t **head, int n);
