@@ -59,6 +59,7 @@ typedef struct instruction_s
 void f_push(stack_t **head, unsigned int current_line);
 void f_pall(stack_t **head, unsigned int current_line);
 void f_pint(stack_t **head, unsigned int current_line);
+void f_pop(stack_t **head, unsigned int current_line);
 void execute(char *line, stack_t **head, unsigned int line_number, FILE *file);
 void free_stack(stack_t *head);
 void saddnode(stack_t **head, int n);
