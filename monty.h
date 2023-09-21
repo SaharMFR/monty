@@ -55,4 +55,11 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+void f_push(stack_t **head, unsigned int num);
+void f_pall(stack_t **head, unsigned int num);
+void execute(char *line, stack_t **head, unsigned int current_line, FILE *file);
+void free_stack(stack_t *head);
+void saddnode(stack_t **head, int n);
+void qaddnode(stack_t **head, int n);
+
 #endif
