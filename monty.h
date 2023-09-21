@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -39,7 +40,7 @@ typedef struct proginfo_s
 	int sq;
 } proginfo_t;
 
-extern poginfo_t info;
+extern proginfo_t info;
 
 /**
  * struct instruction_s - opcode and its function
@@ -55,8 +56,8 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void f_push(stack_t **head, unsigned int num);
-void f_pall(stack_t **head, unsigned int num);
+void f_push(stack_t **head, unsigned int current_line);
+void f_pall(stack_t **head, unsigned int current_line);
 void execute(char *line, stack_t **head, unsigned int current_line, FILE *file);
 void free_stack(stack_t *head);
 void saddnode(stack_t **head, int n);
