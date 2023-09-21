@@ -39,9 +39,9 @@ void execute(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 			i++;
 		}
 	}
-	if (!opcode && !opcodes[i].opcode)
+	if (!opcodes[i].opcode)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s", line_number, opcode);
+		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 		fclose(file);
 		free(line);
 		free_stack(*stack);
