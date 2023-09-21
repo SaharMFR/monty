@@ -18,9 +18,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 
 /**
@@ -52,13 +52,13 @@ extern proginfo_t info;
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
 void f_push(stack_t **head, unsigned int current_line);
 void f_pall(stack_t **head, unsigned int current_line);
-void execute(char *line, stack_t **head, unsigned int current_line, FILE *file);
+void execute(char *line, stack_t **head, unsigned int line_number, FILE *file);
 void free_stack(stack_t *head);
 void saddnode(stack_t **head, int n);
 void qaddnode(stack_t **head, int n);

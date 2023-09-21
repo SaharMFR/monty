@@ -4,10 +4,10 @@
  * execute - Executes the opcode.
  * @line: The line to execute (opcode).
  * @stack: The head of the linked list (the stack).
- * @current_line: The currently-executed line.
+ * @line_number: The currently-executed line.
  * @file: The pointer to the Monty file.
  */
-void execute(char *line, stack_t **stack, unsigned int current_line, FILE *file)
+void execute(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 {
 	instruction_t opcodes[] = {
 		{"push", f_push},
@@ -28,7 +28,7 @@ void execute(char *line, stack_t **stack, unsigned int current_line, FILE *file)
 		{
 			if (strcmp(opcode, opcodes[i].opcode) == 0)
 			{
-				opcodes[i].f(stack, current_line);
+				opcodes[i].f(stack, line_number);
 				return;
 			}
 			i++;
@@ -36,7 +36,7 @@ void execute(char *line, stack_t **stack, unsigned int current_line, FILE *file)
 	}
 	if (!opcode && !opcodes[i].opcode)
 	{
-		fprintf(stderr, "L%d: unknown instruction %s\n", current_line, opcode);
+		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 		fclose(file);
 		free(line);
 		free_stack(*stack);
