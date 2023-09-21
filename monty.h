@@ -67,6 +67,7 @@ void f_sub(stack_t **head, unsigned int current_line);
 void f_div(stack_t **head, unsigned int current_line);
 void f_mul(stack_t **head, unsigned int current_line);
 void f_mod(stack_t **head, unsigned int current_line);
+void f_pchar(stack_t **head, unsigned int current_line);
 void execute(char *line, stack_t **head, unsigned int line_number, FILE *file);
 void free_stack(stack_t *head);
 void saddnode(stack_t **head, int n);
