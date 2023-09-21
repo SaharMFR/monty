@@ -12,6 +12,7 @@ void execute(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 	instruction_t opcodes[] = {
 		{"push", f_push},
 		{"pall", f_pall},
+		{"pint", f_pint},
 		{NULL, NULL}
 	};
 
