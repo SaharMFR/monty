@@ -8,6 +8,7 @@
 void f_rotl(stack_t **head, unsigned int current_line)
 {
 	stack_t *temp1, *temp2;
+	(void) current_line;
 
 	if ((*head) && ((*head)->next))
 	{
