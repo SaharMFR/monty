@@ -25,6 +25,8 @@ void execute(char *line, stack_t **stack, unsigned int line_number, FILE *file)
 		{"pstr", f_pstr},
 		{"rotl", f_rotl},
 		{"rotr", f_rotr},
+		{"stack", f_stack},
+		{"queue", f_queue},
 		{NULL, NULL}
 	};
 
